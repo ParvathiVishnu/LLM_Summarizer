@@ -2,12 +2,13 @@
 
 ```mermaid
 flowchart TD
-    A[User uploads document:\n.txt / .pdf / .docx] --> B[Extract text using utils.py]
-    B --> C[Split text into chunks\n(~1500 characters)]
-    C --> D[Summarize each chunk\nvia llama3.2-summary model]
-    D --> E[Clean summaries:\nremove markdown + normalize bullets]
-    E --> F[Join all chunk summaries]
-    F --> G[Display in Streamlit UI\n+ download option]
-    F --> H[Save summary to folder:\n test_results_llama3.2-summary/]
-    H --> I[Compare summary vs original\nusing compare_results.py]
+    A[User uploads document:\nTXT, PDF, or DOCX] --> B[Extract text using utils.py]
+    B --> C[Split text into chunks\napprox 1500 characters]
+    C --> D[Summarize each chunk\nwith llama3.2-summary model]
+    D --> E[Clean summaries:\nremove markdown and fix bullets]
+    E --> F[Combine chunk summaries\ninto final summary]
+    F --> G[Show summary in Streamlit\n+ allow download]
+    F --> H[Save summary to\n test_results_llama3.2-summary/]
+    H --> I[Compare summary vs original\nwith compare_results.py]
 ```
+
