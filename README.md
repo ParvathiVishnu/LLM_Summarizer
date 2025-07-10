@@ -62,7 +62,7 @@ ollama run llama3.2
 Make a `Modelfile` like this:
 
 ```Dockerfile
-FROM llama3:8b
+FROM llama3:2
 
 SYSTEM "You are an expert summarizer. Summarize any input into clear, concise bullet points. Focus only on the most important and relevant information. Eliminate redundancy and preserve the original meaning."
 
@@ -87,7 +87,7 @@ It will launch in your browser.
 
 ---
 
-## 📁 Folder Structure
+## Folder Structure
 
 ```
 .
@@ -120,13 +120,30 @@ flowchart TD
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
-> *(Add screenshots here to show UI, summary output, etc.)*
+### File Upload + Summarization
+
+Here we can see pdf file is uploaded and it shows a document preview of first 3000 characters
+![Upload and Summarize](images/summarizer-1.png)
+
+Here we can see long documents are summarized by chunking with maximum 1500 characters 
+![Upload and Summarize](images/summarizer-2.png)
+
+Here we can see the final summary of our document
+![Upload and Summarize](images/summarizer-3.png)
+
+### Comparison View
+
+Here we have documents from various domains like education,government,legal,research,medical,technical etc to compare our summarization app.
+![Compare](images/compare-1.png)
+
+Here we can see how the document from literature field is summarized
+![Compare](images/compare-2.png)
 
 ---
 
-## 📌 Sample Prompt to LLM
+## Sample Prompt to LLM
 
 ```
 Summarize the following document content in clear, concise bullet points. 
@@ -135,20 +152,11 @@ Focus only on the key points while preserving semantic meaning:
 
 ---
 
-## 🔐 Why Local?
+## Why Local?
 
 - No API keys required
 - Full privacy — documents stay on your machine
 - Custom system prompts for consistent summarization
-
----
-
-## 🙋‍♀️ Future Improvements
-
-- Add extractive vs abstractive summary toggle
-- Summarization quality metrics (e.g., Rouge / BLEU)
-- OCR improvements for scanned PDFs
-- Frontend with filtering by summary length
 
 ---
 
